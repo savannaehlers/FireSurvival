@@ -4,8 +4,8 @@ fit_fire_model <- function(
   output_file = "results/model/fire_stan_fit.rds",
   chains = 3,
   iter_warmup = 2000,
-  iter_sampling = 10000,
-  thin = 10,
+  iter_sampling = 2000,
+  thin = 20,
   seed = 1234,
   parallel_chains = chains
 ) {

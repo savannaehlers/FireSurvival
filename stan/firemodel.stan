@@ -21,18 +21,18 @@ model {
   }
 }
 
-generated quantities {
-  vector[N] log_lik;
-  vector[N] p_fire;
-
-  for (n in 1:N) {
-    real eta = dot_product(X[n], beta);
-    p_fire[n] = Phi(eta);
-
-    if (include_row[n] == 1) {
-      log_lik[n] = bernoulli_lpmf(y[n] | Phi(eta));
-    } else {
-      log_lik[n] = 0;
-    }
-  }
-}
+// generated quantities {
+//   vector[N] log_lik;
+//   vector[N] p_fire;
+//
+//   for (n in 1:N) {
+//     real eta = dot_product(X[n], beta);
+//     p_fire[n] = Phi(eta);
+//
+//     if (include_row[n] == 1) {
+//       log_lik[n] = bernoulli_lpmf(y[n] | Phi(eta));
+//     } else {
+//       log_lik[n] = 0;
+//     }
+//   }
+// }
